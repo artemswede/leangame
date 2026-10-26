@@ -1,0 +1,4 @@
+0: [h]The Lean Library[/]|||Welcome to the lean library.||This is where you will find detailed information on all things Lean.||Get started with the [link=1]introduction[/], or select a topic on the left.
+1: [h]Introduction[/]|||What is lean?||Lean is a way to optimize workflow and increase productivity in any organization.
+2: [h]The Seven Wastes[/]|||A core concept in lean thinking is identifying wastes and eliminating them. As a guide, there are seven main wastes defined as followed:||Overproduction||Etc
+3: Overproduction is not good.

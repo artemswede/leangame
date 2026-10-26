@@ -1,0 +1,26 @@
+text { font: default; color: #fff; transparent: true; }
+img { transparent: true; }
+group { transparent: true; }
+radiogroup { transparent: true; }
+button { font: default; border: 3; border-color: #ccc; color: #000; background: #fff; 3d-border: true; padding: 2; padding-top: 0; padding-bottom: 0; font-size: 8; }
+button:active { invert-3d: true; }
+checkbox { border: 2; border-color: #58e; background: #dde; 3d-border: true; invert-3d: true; padding: 6; }
+checkbox:selected { background-image: Art/Gui/checkbox.png; }
+radio { border: 2; border-color: #58e; background: #dde; 3d-border: true; invert-3d: true; padding: 6; }
+radio:selected { background-image: Art/Gui/radiobox.png; }
+slider { border: 1; border-color: #58e; background: #dde; 3d-border: true; invert-3d: true; }
+msgbox { border: 2; border-color: #58e; background: #dde; 3d-border: true; padding: 8; color:#000; font-size: 8; }
+
+page { transparent: true; }
+h { font: default; color: #000; font-size: 14; transparent: true; }
+a { font: default; color: #00f; transparent: true; }
+a:hover { color: #0f0; }
+a:active { color: #f00; }
+scrollbar { background: #bbc; padding: 2; }
+scrollbutton { background: #dde; border-color: #58e; border: 2; 3d-border: true; padding: 8; }
+scrollbutton:active { invert-3d: true; }
+scrollbutton.up { background-image: Art/Gui/arrowUp.png; }
+scrollbutton.down { background-image: Art/Gui/arrowDown.png; }
+scrollbutton.left { background-image: Art/Gui/arrowLeft.png; }
+scrollbutton.right { background-image: Art/Gui/arrowRight.png; }
+scrollcaret { background: #dde; border-color: #58e; border: 2; 3d-border: true; padding: 8; }

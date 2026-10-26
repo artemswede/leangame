@@ -1,0 +1,6 @@
+defaultScheme {
+  name: 0;
+  desc: 0;
+
+  scheme: bikeMan,bikeMan,bikeWoman,bikeChild;
+}

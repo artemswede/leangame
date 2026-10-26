@@ -1,0 +1,5 @@
+FREETYPE
+default
+Config/default.ttf
+30
+all

@@ -1,0 +1,4 @@
+file: Art/Stations/MarketerWorker.txt;
+idleAnim: 0;
+workAnim: 1;
+offset: 100 100;

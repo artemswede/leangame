@@ -1,0 +1,4 @@
+file: Art/Stations/CustomerIdle.txt;
+idleAnim: 0;
+workerAnim: 1;
+waitTime: 0.3;

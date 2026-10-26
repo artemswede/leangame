@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<gui>
+  <head>
+    <style>
+      #modulePics { visible: false; }
+      .modulePic { border: 2; border-color: #000; opacity: 0; transparent: false; }
+      .modulePic:hover { border-color: #f0f; }
+      .modulePic:selected { border-color: #0f0; }
+
+      .prodSchemePic { border: 1; border-color: #fff; opacity: 0; transparent: false; }
+      .prodSchemePic:selected { border-color: #f00; }
+
+      #moduleInfo { padding: 5; transparent: false; background: #000; opacity: 0.5; border: 2; border-color: #000; visible: false; }
+
+      #moduleOverInfo { padding: 5; transparent: false; background: #787FA6; border: 2; border-color: #000; visible: false; background-image: Art/MachineInfo.png; background-repeat: repeat-x; }
+
+      .gameInfoBox { visible: false; transparent: false; background: #787fa6; background-image: Art/Round.png; background-repeat: repeat-x; border: 2; border-color: #fff; padding: 10; }
+
+      #timerText { font-size: 16; color: #0f0; font: timerFont;}
+
+      .inputBox { font-size: 16; color: #000; font: default; }
+
+      #changeInfo { visible: false; }
+      #moduleChangeData { transparent: false; background: #000; opacity: 0.5; border: 2; border-color: #000; visible: false; padding: 5; }
+
+      .dataBox { transparent: false; background: #000; opacity: 0.5; border: 2; border-color: #000; }
+
+      #prodControl { visible: false; }
+
+      .orderImage { background: #000; opacity: 0.5; border: 1; border-color: #fff; transparent: false; }
+
+      .big { font-size: 24; }
+      .small { font-size: 8; }
+      .tiny { font: tinyFont; font-size: 6; }
+      .black { color: #000; }
+      .white { color: #fff; }
+
+      .message { transparent: false; border: 2; border-color: #58e; background: #dde; 3d-border: true; padding: 8; color:#000; font-size: 8; visible: false; }
+
+      .popupInfo { background: #787fa6; background-image: Art/Round.png; background-repeat: repeat-x; font-size: 8; color: #000; font: smallFont; transparent: false; border: 2; border-color: #fff; padding: 2; }
+
+      .paintingBatch { background: #000; visible:true; transparent: false; background-image: Art/Round.png; background-repeat: repeat-x; border: 2; border-color: #fff; padding: 2; }
+	  
+	  .truckMenu { visible: false; transparent: false; background: #000; opacity: 0.5; border: 2; border-color: #000; }
+	  
+	  #moveInfo { visible: false; }
+	  #highscoreMessage { visible: false; }
+
+		.timeImageInactive { background: #999; transparent: false; }
+		.timeImageActive { background: #0f0; transparent: false; }
+		
+    </style>
+
+    <script src="Script/guiUtilities.js" />
+    <script src="Script/guiScript.js" />
+		<script src="Script/guiModuleScripts.js" />
+    <script src="Script/truckScript.js" />
+  </head>
+
+  <body>
+	<group x="300" y="5">
+		<img src="Art/HUD.png" x="0" y="0" zIndex="100" />
+		<text x="20" y="5" class="black" string="124" fileId="0" zIndex="101" />
+		<text id="roundText" x="110" y="5" class="black" zIndex="101" />
+		
+		<text id="timerText" zIndex="101" x="190" y="4" />
+		
+		<text x="270" y="5" class="black" string="120" fileId="0" zIndex="101" />
+		<text id="moneyText" x="360" y="5" class="black" zIndex="101" />
+	</group>
+	
+    <group id="main">
+		  <button string="103" x="400" y="725" onclick="pauseGame" />
+		
+			<group id="timeChange" x="550" y="725">
+				<img src="Art/Gui/timeSpeed1Active.png" activeImage="Art/Gui/timeSpeed1Active.png" inactiveImage="Art/Gui/timeSpeed1.png" id="timeImg1" onclick="changeTime" value="1" />
+				<img src="Art/Gui/timeSpeed2.png" activeImage="Art/Gui/timeSpeed2Active.png" inactiveImage="Art/Gui/timeSpeed2.png" id="timeImg2" onclick="changeTime" x="28" value="2" />
+				<img src="Art/Gui/timeSpeed3.png" activeImage="Art/Gui/timeSpeed3Active.png" inactiveImage="Art/Gui/timeSpeed3.png" id="timeImg3" onclick="changeTime" x="56" value="4" />
+			</group>
+			
+      <group id="damageMsg" class="message" zIndex="1000">
+        <text fileId="0" string="202" id="damageMsgInfo" class="black" />
+        <button x="10" y="90" fileId="0" string="203" id="damageMsgDiscard" />
+        <button x="100" y="90" fileId="0" string="204" id="damageMsgFix" />
+        <button x="10" y="120" fileId="0" string="205" id="damageMsgFind" />
+      </group>
+
+      <group id="modulePics" x="550" y="680">
+        <img x="0"   y="0" class="modulePic" />
+        <img x="68"  y="0" class="modulePic" />
+        <img x="136" y="0" class="modulePic" />
+        <img x="204" y="0" class="modulePic" />
+        <img x="272" y="0" class="modulePic" />
+        <img x="340" y="0" class="modulePic" />
+        <img x="408" y="0" class="modulePic" />
+      </group>     
+
+
+
+      <group id="moduleInfo">
+        <text id="moduleInfoText" fileId="0" string="150" />
+      </group>
+
+      <group id="moduleOverInfo" zIndex="90">
+        <text id="moduleOverInfoText" fileId="0" string="151" x="5" />
+        <img width="250" height="104" />
+      </group>
+
+      <group id="productInfo" x="10" y="650">
+        <group id="prodControl">
+          <button id="startProd" fileId="0" string="101" y="30" />
+          <button id="endProd" fileId="0" string="102" y="60" />
+        </group>
+      </group>
+
+      <group id="orderInfo" x="10" y="575">
+        <!--text string="122" fileId="0"/-->
+        <group id="ordersData">
+          <img x="100" y="0" class="orderImage" />
+          <text x="100" y="0" class="small" zIndex="2" />
+          <img x="140" y="0" class="orderImage" />
+          <text x="140" y="0" class="small" zIndex="2" />
+          <img x="180" y="0" class="orderImage" />
+          <text x="180" y="0" class="small" zIndex="2" />
+          <img x="220" y="0" class="orderImage" />
+          <text x="220" y="0" class="small" zIndex="2" />
+          <img x="260" y="0" class="orderImage" />
+          <text x="260" y="0" class="small" zIndex="2" />
+        </group>
+      </group>
+    </group>
+
+    <group id="gameTurnInfo" x="200" y="100" zIndex="200" class="gameInfoBox">
+      <text x="50" y="5" string="530" fileId="0"/>
+      <text id="roundOverTextTitle" string="500" fileId="0" zIndex="5" x="20" y="50" />
+      <text id="roundOverTextNames" string="541" fileId="0" zIndex="5" x="20" y="180" />
+      <text id="roundOverTextProduced" string="542" fileId="0" zIndex="5" x="230" y="180" />
+      <text id="roundOverTextOrdered" string="543" fileId="0" zIndex="5" x="390" y="180" />
+      <text id="roundOverTextDelivered" string="544" fileId="0" zIndex="5" x="520" y="180" />
+      <button id="roundOverPreviousStats" bmap="Art/Gui/arrowLeft.png" x="240" y="330" zIndex="10" />
+      <text string="547" fileId="0" zIndex="5" x="300" y="320" />
+      <button id="roundOverNextStats" bmap="Art/Gui/arrowRight.png" x="530" y="330" zIndex="5" />
+      <button id="changeLayout" fileId="0" string="111" x="580" y="445" zIndex="5" />
+    </group>
+	
+	<group id="gameStartInfo" x="212" y="100" zIndex="200" class="gameInfoBox">
+      <text x="50" y="5" string="520" fileId="0"/>
+      <text id="gameStartTurn" string="501" fileId="0" zIndex="5" x="30" y="60" />
+      <button id="startTurn" fileId="0" string="110" x="470" y="500" zIndex="5" />
+    </group>
+
+    <group id="endGameInfo" x="212" y="100" zIndex="200" class="gameInfoBox">
+      <img width="16" height="600" />
+      <text x="50" y="5" string="540" fileId="0"/>
+      <text id="endGameText" string="510" fileId="0" zIndex="5" x="100" y="50" />
+      <button id="mainMenuBtn" fileId="0" string="113" x="470" y="560" zIndex="10" />
+	  <button id="enterHighscore" fileId="0" string="114" x="300" y="560" zIndex="10" />
+    </group>
+	
+	<group id="pauseMenu" x="400" y="150" zIndex="200" class="gameInfoBox">
+      <img width="16" height="300" />
+      <text x="20" y="5" string="300" fileId="0"/>
+	  <button id="backToGame" fileId="0" string="301" x="30" y="100" zIndex="5" />
+	  <button id="leanLibrary" fileId="0" string="302" x="30" y="150" zIndex="5" onclick="showPauseLibrary" />
+      <button id="endTurn" fileId="0" string="303" x="30" y="200" zIndex="5" />
+      <button id="exitGame" fileId="0" string="304" x="30" y="250" zIndex="5" onclick="exitGame" />
+    </group>
+
+    <group id="changesSplash" x="212" y="100" zIndex="200" class="gameInfoBox">
+      <text x="50" y="5" string="700" fileId="0"/>
+      <text id="endGameText" string="701" fileId="0" zIndex="5" x="30" y="50" />
+      <button id="startGameBtn" fileId="0" string="702" x="470" y="400" zIndex="50" />
+    </group>
+
+    <group id="confirmChanges" x="212" y="200" zIndex="200" class="gameInfoBox">
+      <text x="50" y="5" string="703" fileId="0"/>
+      <text id="endGameText" string="704" fileId="0" zIndex="5" x="30" y="50" />
+      <button id="confirmChangesBtn" fileId="0" string="705" x="370" y="200" zIndex="5" />
+    </group>
+	
+	<group id="notImplemented" x="212" y="200" zIndex="200" class="gameInfoBox">
+      <text x="50" y="5" string="703" fileId="0"/>
+      <text string="704" fileId="0" zIndex="5" x="30" y="70" />
+      <button fileId="0" string="705" x="300" y="200" zIndex="5" />
+    </group>
+	
+	<group id="moveInfo" x="675" y="5" zIndex="200" class="popupInfo">
+      <text x="20" y="3" string="2100" fileId="0"/>
+      <text id="moveInfoText" string="2101" class="tiny" fileId="0" zIndex="5" x="10" y="35" />
+	  <!--page x="10" y="25" class="small" id="moveInfoText" width="300" height="400" zIndex="5" string="2101" fileId="0" /-->
+    </group>
+
+    <group id="changeInfo">
+      <group id="moduleChangeData" zIndex="100">
+      </group>
+
+      <text x="410" y="720" id="changesLeftText" class="black" />
+      <text x="435" y="720" string="650" fileId="0" class="black" />
+      
+      <button id="changeDone" x="890" y="725" string="112" fileId="0" />
+    </group>
+	
+	<group id="highscoreMessage">
+      <img x="0" y="0" width="1024" height="768" zIndex="10000" />
+      <group zIndex="10010" class="popupInfo" x="300" y="350">
+	    <text x="30" y="4" string="324" fileId="0" />
+        <text x="30" y="35" string="320" id="highscoreText" />
+        <text x="30" y="65" string="321" />
+        <input x="30" y="105" id="highscoreValue" size="200" />
+        <button x="30" y="155" id="highscoreOk" string="322" />
+        <button x="30" y="185" id="highscoreCancel" string="323" />
+      </group>
+    </group>
+  </body>
+</gui>

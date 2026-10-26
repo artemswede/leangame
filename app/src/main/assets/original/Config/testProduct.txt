@@ -1,0 +1,12 @@
+data {
+  id: testProduct;
+
+  cost: 100;
+  name: 0;
+  desc: 0;
+}
+
+prop0 { default: true; file: Art/testProduct1.txt; }
+prop1 { frame: 1; }
+prop2 { frame: 2; }
+prop3 { frame: 3; }

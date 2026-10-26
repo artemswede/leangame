@@ -1,0 +1,3 @@
+Art/Products/BikeMan.png 2
+0 0 64 48
+65 0 64 48

@@ -1,0 +1,3 @@
+file: Art/workerAnim.txt;
+teamRadius: 100;
+idleAnim: 0;

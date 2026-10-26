@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<gui>
+  <head>
+    <style>
+.textBox { transparent: false; border: 2; border-color: #000; background: #ccc; opacity: 0.5; padding: 20; }
+.credText { color: #000; font-size: 15; }
+.infoBox { transparent: false; border: 2; border-color: #555; background: #89c; padding: 20; }
+.infoText { color: #000; }
+#testGameArea { visible: false; }
+    </style>
+		<script>
+var credBox;
+
+function closeCredits(el) {
+	if (credBox) {
+		gui.removeObject(credBox);
+		credBox = null;
+		return false;
+	}
+	return true;
+}
+
+function showCredits(el) {
+	if (credBox) { gui.removeObject(credBox); }
+	credBox = gui.createObject("group","textBox",200);
+	var text = gui.createObject("text","credText",250,credBox);
+	text.text = game.getString(30);
+	
+	var closeBtn = gui.createObject("button","",250);
+	closeBtn.text = game.getString(31);
+	closeBtn.setBounds(text.width*0.5 - closeBtn.width*0.5,text.height + 10,-1,-1);
+	closeBtn.setAttribute("onclick","closeCredits");
+	credBox.addChild(closeBtn);
+	credBox.setBounds(0,0,-1,-1);
+	credBox.setBounds(512-credBox.width*0.5,384-credBox.height*0.5,-1,-1);
+}
+
+function showLibrary(el) {
+	game.showLibrary(0);
+	return false;
+}
+
+function exitGame(el) {
+	game.exit();
+	return false;
+}
+
+		</script>
+  </head>
+
+  <body>
+	<img x="0" y="0" src="Art/MenuBG.png" zIndex="-1" />
+    <text x="320" y="75"> </text>
+		
+		<group id="testGameArea" zIndex="10000">
+			<img x="0" y="0" width="1024" y="768" />
+			<group class="infoBox" x="300" y="300" zIndex="10">
+				<text x="20" y="20" string="16" class="infoText" />
+				<input x="20" y="60" id="testGameValue" size="250" />
+				<button x="50" y="100" id="testGameOk" string="17" />
+				<button x="150" y="100" id="testGameCancel" string="18" />
+			</group>
+		</group>
+		
+    <group x="475" y="400">
+      <button id="testGame" y="0" string="15" zIndex="1" />
+	  <button id="startGame" y="40" string="10" fileId="0" zIndex="1" />
+	  <button id="library" y="80" string="12" fileId="0" zIndex="1" onclick="showLibrary" />
+      <button id="highscore" y="120" string="19" zIndex="1" />
+	</group>
+		
+	<group x="20" y="630">
+      <button id="config" y="0" string="11" fileId="0" zIndex="1" />
+      <button y="40" string="13" fileId="0" zIndex="1" onclick="showCredits" />
+      <button y="80" string="14" fileId="0" zIndex="1" onclick="exitGame" />
+    </group>
+  </body>
+</gui>

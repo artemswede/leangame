@@ -1,0 +1,307 @@
+Planning {
+  type: planning;
+
+  input: *base;
+  wait: 1;
+
+  outCon: casting;
+  maxInBuffer: 6;
+  maxOutBuffer: 6;
+
+  file: Stations/PlanningStation.txt;
+  size: 120 90;
+  leanDist: 32;
+  icon: Thumbnails/Planning.png;
+  name: 1010;
+  desc: 1011;
+
+  bufferImage: bufferPack.png;
+  script: planningModule.js;
+
+  moveCost: 150;
+  damage: 0.5;
+
+  workerOffset: -10 -5;
+  workerAnim: 4;
+
+  maskFile: Stations/PlanningStation.txt;
+  maskOffset: 0 -12 12;
+  damageProducts: true;
+  QA: false;
+  QARepair: 0;
+  
+  cleanStationAtStart: false;
+  cleaningTime: 10.0;
+
+  bufferDimensions: 200 150;
+}
+
+Casting {
+  type: casting;
+
+  input: *base;
+  output: +casted;
+  wait: 1;
+
+  outCon: assembly;
+  maxInBuffer: 6;
+  maxOutBuffer: 6;
+
+  file: Stations/CastingStation.txt;
+  size: 120 150;
+  maskFile: Stations/CastingStationMask.txt;
+  maskOffset: 0 -10 10;
+  productionPos: 0 15 0;
+  
+  leanDist: 32;
+  icon: Thumbnails/Casting.png;
+  name: 1000;
+  desc: 1001;
+
+  bufferImage: bufferPack.png;
+  script: castingModule.js;
+
+  moveCost: 2500;
+  damage: 0.5;
+
+  workerOffset: 25 -1;
+  workerAnim: 2;
+  damageProducts: true;
+  QA: false;
+  QARepair: 7.5;
+  
+  cleanStationAtStart: false;
+  cleaningTime: 20.0;
+
+  bufferDimensions: 175 150;
+}
+
+Assembly {
+  type: assembly;
+
+  input: casted;
+  output: +assembled;
+  wait: 2;
+
+  outCon: painting;
+  maxInBuffer: 6;
+  maxOutBuffer: 6;
+
+  file: Stations/AssemblyStation.png;
+  size: 179 134;
+  productionPos: 0 20 20;
+  
+  leanDist: 32;
+  icon: Thumbnails/Assembly.png;
+  name: 1002;
+  desc: 1003;
+
+  bufferImage: bufferPack.png;
+  script: assemblyModule.js;
+
+  moveCost: 150;
+  damage: 0.5;
+
+  workerOffset: 20 -5;
+  workerAnim: 1;
+  damageProducts: true;
+  QA: false;
+  QARepair: 7.5;
+  
+  cleanStationAtStart: false;
+  cleaningTime: 15.0;
+
+  bufferDimensions: 200 120;
+}
+
+Painting {
+  type: painting;
+
+  input: assembled;
+  output: +painted;
+  wait: 4;
+
+  outCon: qa;
+  maxInBuffer: 10;
+  maxOutBuffer: 6;
+
+  file: Stations/PaintStation.txt;
+  maskFile: Stations/PaintStationMask.txt;
+  maskOffset: 0 -10 10;
+  productionPos: 0 20 20;
+  
+  size: 179 134;
+  leanDist: 32;
+  icon: Thumbnails/painting.png;
+  name: 1004;
+  desc: 1005;
+
+  bufferImage: bufferPack.png;
+  script: paintingModule.js;
+
+  moveCost: 1000;
+  damage: 0.5;
+
+  workerOffset: 7 -20;
+  workerAnim: 3;
+  damageProducts: true;
+  QA: false;
+  QARepair: 2.5;
+  
+  cleanStationAtStart: false;
+  cleaningTime: 25.0;
+  
+  cost: 10000;
+
+  bufferDimensions: 240 240;
+}
+
+Painting2 {
+  type: painting;
+
+  input: assembled;
+  output: +painted;
+  wait: 2;
+
+  outCon: qa;
+  maxInBuffer: 10;
+  maxOutBuffer: 6;
+
+  file: Stations/PaintStationUpgrade.txt;
+  maskFile: Stations/PaintStationUpgradeMask.txt;
+  maskOffset: 0 -10 10;
+  productionPos: 0 20 20;
+  
+  size: 179 134;
+  leanDist: 32;
+  icon: Thumbnails/painting.png;
+  name: 1004;
+  desc: 1005;
+
+  bufferImage: bufferPack.png;
+  script: painting2Module.js;
+
+  moveCost: 1000;
+  damage: 0.5;
+
+  workerOffset: 7 -20;
+  workerAnim: 3;
+  damageProducts: true;
+  QA: false;
+  QARepair: 2.5;
+  
+  cleanStationAtStart: false;
+  cleaningTime: 25.0;
+
+  bufferDimensions: 240 240;
+}
+
+QA {
+  type: qa;
+
+  input: painted;
+  output: +checked;
+  wait: 1;
+
+  outCon: storage;
+  maxInBuffer: 6;
+  maxOutBuffer: 6;
+
+  file: Stations/QAStation.png;
+  size: 90 90;
+  leanDist: 32;
+  icon: Thumbnails/QA.png;
+  name: 1006;
+  desc: 1007;
+  productionPos: 10 0 50;
+
+  bufferImage: bufferPack.png;
+  script: qaModule.js;
+
+  moveCost: 150;
+  damage: 0.5;
+
+  workerOffset: 15 -5;
+  workerAnim: 5;
+  damageProducts: false;
+  QA: false;
+  QARepair: 0;
+  
+  cleanStationAtStart: false;
+  cleaningTime: 10.0;
+
+  bufferDimensions: 180 120;
+}
+
+Storage {
+  type: storage;
+
+  input: checked;
+  output: +finished;
+  wait: 0.5;
+
+  outCon: counter;
+  maxInBuffer: 6;
+  maxOutBuffer: 12;
+
+  file: Stations/StorageStation.png;
+  size: 224 134;
+  leanDist: 32;
+  icon: Thumbnails/storage.png;
+  name: 1008;
+  desc: 1009;
+
+  bufferImage: bufferPack.png;
+  script: storageModule.js;
+
+  moveCost: 500;
+  damage: 0.5;
+
+  hasWorker: false;
+  damageProducts: false;
+  QA: false;
+  QARepair: 0;
+  
+  cleanStationAtStart: false;
+  cleaningTime: 10.0;
+
+  bufferDimensions: 250 140;
+}
+
+Counter {
+  type: counter;
+
+  input: finished;
+  output: +sold;
+  wait: 1.6;
+
+  outCon: finish;
+  maxInBuffer: 6;
+  maxOutBuffer: 6;
+
+  file: Stations/CashierStation.png;
+  size: 200 100;
+  leanDist: 32;
+  icon: Thumbnails/storage.png;
+  name: 1014;
+  desc: 1015;
+
+  bufferImage: bufferPack.png;
+  script: counterModule.js;
+
+  moveCost: 500;
+  damage: 0.5;
+
+  workerOffset: 35 -1;
+  workerIdleAnim: 6;
+  workerAnim: 7;
+
+  damageProducts: false;
+  QA: false;
+  QARepair: 0;
+  
+  cleanStationAtStart: false;
+  cleaningTime: 10.0;
+
+  bufferDimensions: 120 100;
+}

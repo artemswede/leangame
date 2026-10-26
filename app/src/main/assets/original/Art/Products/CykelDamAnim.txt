@@ -1,0 +1,5 @@
+Art/Products/CykelDamAnim.png 4
+0 0 64 48
+64 0 64 48
+128 0 64 48
+192 0 64 48

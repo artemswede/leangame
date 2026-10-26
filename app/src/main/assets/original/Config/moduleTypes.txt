@@ -1,0 +1,16 @@
+start {}
+finish {}
+
+planning { }
+
+casting { }
+
+assembly { }
+
+painting { }
+
+qa { }
+
+storage { }
+
+counter { }

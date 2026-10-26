@@ -1,0 +1,207 @@
+# Name of the game
+0: Lean Santa
+1: Mean Santa
+4: Ja
+5: Nej
+
+# Start menu
+10: Starta Spelet
+11: Inställningar
+12: Leanbiblioteket
+13: Medverkande
+14: Avsluta
+15: Starta Loggat Spel
+16: Skriv in ID från ditt formulär
+17: Starta
+18: Avbryt
+19: Visa Toppresultat
+
+# Credits
+30:              --Medverkande--||Design: Joel Nyström, Björn Öjlert|Programmering: Stefan Hurtig|Grafik: Daniel Kaplan, Anders Larsson|Testledare: Billy Frisell
+31: Stäng
+
+# Config menu
+50: Inställningar
+51: Fullskärm:
+52: Ljudvolym:
+53: Musikvolym:
+54: Välj språk:
+55: OK
+56: Tillbaka
+57: Standardinställningar
+58: Proxy server:
+60: Vissa inställingar kräver|att spelet startas om.
+
+# Languages
+70: Engelska
+71: Svenska
+72: Göteborgska
+
+# Highscore menu
+80: Toppreslutat
+81: [name]: [score] ([time])
+82: Tillbaka
+83: Namn
+84: Poäng
+85: Datum
+
+# In-game strings
+100: Ny Produkt
+101: Starta Produktion
+102: Stanna Produktion
+103: Pausa Spelet
+
+110: Börja spelet
+111: Fortsätt
+112: Färdigändrat!
+113: Tillbaka till huvudmenyn
+114: Ladda upp resultat
+
+120: Pengar
+121: Nästa
+122: Ordrar
+123: Hastighet:
+124: Runda
+
+# Module info strings
+150: [name]|Kostnad: $[cost]|[desc]
+151: [name]| Skadenivå: [dmg]| Inbuffert: [inBufSize]/[inBufMax]| Utbuffert: [outBufSize]/[outBufMax]
+
+200: Inbuffert max:
+201: Utbuffert max:
+202: [module] upptäckte en defekt produkt.|Vad gör Du?
+203: Kassera
+204: Reparera
+205: Hitta felaktig station
+
+#Pause menu
+300: Spelet Pausat
+301: Fortsätt Spel
+302: Leanbiblioteket
+303: Till Huvudmenyn
+304: Avsluta
+305: Är du säker?
+
+#Highscore stuff
+320: Din poäng: [score]
+321: Skriv in ditt namn:
+322: ladda upp poäng
+323: Avbryt
+324: Ladda upp Highscore
+
+# Round info
+500: Slut på runda [turn]|Förtjänst denna runda: [earnings]||Produktion
+#	 		 		Producerade			Beställda       	Levererade|
+#	[bikeManName] 	[bikeManProduced]	[bikeManOrdered]	[bikeManDelivered]|
+#	[bikeWomenName]	[bikeWomanProduced]	[bikeWomanOrdered]	[bikeWomanDelivered]|
+#	[bikeChildName]	[bikeChildProduced]	[bikeChildOrdered]	[bikeChildDelivered]
+541: |[bikeManName]|[bikeWomanName]|[bikeChildName]
+542: Producerade|[bikeManProduced]|[bikeWomanProduced]|[bikeChildProduced]
+543: Beställda|[bikeManOrdered]|[bikeWomanOrdered]|[bikeChildOrdered]
+544: Levererade|[bikeManDelivered]|[bikeWomanDelivered]|[bikeChildDelivered]
+545: Föregående runda
+546: Nästa runda
+547: Loggade rundor
+501: Välkommen till Lean Bicycle Factory.||Ditt jobb här är att optimera fabriken|och få det att rulla på smidigt.||Observera flödet och planera hur du skulle|kunna optimera det till nästa runda.||Runda ett börjar när du klickar|på knappen.
+502: Vill du få obegränsade förändringar?|Väljer du Ja kommer du bara spela 5 rundor.|Väljer du Nej får du fortsätta som vanligt, men får spela i 6 rundor.
+510: Spelet Slut!||Slutresultat: [score]
+520: Lean Bicycle Factory
+530: Produktionscykel avslutad
+540: Spelet är slut
+
+# Module change info
+600: Flytta
+601: Produktionsschema
+602: Underhåll
+603: Personal
+604: Städtid:
+605: Flytten kommer kosta $[cost]. Fortsätt?
+606: Kvalitetskontroll
+607: Lagerinställningar
+608: Köp ny maskin
+609: Ställtid
+610: Satsstorlek
+611: Sälj Station
+650: Förändringar kvar
+651: Satsstorlek:
+652: Sälj Truck
+
+# Changes
+700: Utför förändringar
+701: I detta läget kan du utföra förändringar|i din fabrik. Du har bara två förändringar|per runda, så välj noggrant.||Klicka på en station för att se|vilka förändringar man kan göra.||Efter du gjort dina ändringar kommer|nästa runda börja.||Lycka till!
+702: Börja ändra
+703: Färdigändrat!
+704: Nu ska vi se om förändringarna du gjort|kommer göra den här fabriken bättre!
+705: Starta nästa runda
+
+# Module names/descriptions
+1000: Gjutning 
+1001: Gjuter ramen
+1002: Montering
+1003: Monterar alla delar
+1004: Måleri
+1005: Målar cyklarna
+1006: Kvalitetskontroll
+1007: Testar efter defekter
+1008: Lager
+1009: Lagrar färdiga produkter
+1010: Planering
+1011: Schemalägger ordrar
+1012: Fraktare
+1013: Flyttar produkter från station till station
+1014: Kundmottagning
+1015: Här sker försäljning av cyklar
+
+# Product names/descriptions
+2000: Santa's Red Snowman
+2001: Pretty fun stuff
+2002: Herrcyklar
+2003: Damcyklar
+2004: Barncyklar
+
+2005: Kostnad: [cost]|Tyngd: [weight]
+2006: Lätt
+2007: Medium
+2008: Tung
+
+# Library Links
+2050: Hjälp
+2051: Introduktion
+2052: De Sju Slöserierna
+2053: Något Leant
+
+# Change descriptions
+2100: Flytta station
+2101: Flytta en station närmare de andra för att|minska hur långt en produkt måste färdas.||När två buffertar överlappar förenas de|till en. Detta innebär att ingen truck behövs.||Den blåa cirkeln visar arbetarens samarbets-|radius. Placera arbetare tillsammans för att|minska misstag||Vikt: [weight]     Kostnad: [cost]
+2102: Truck satsstorlek
+2103: Bestäm hur många produkter|att flytta i taget.|Gäller för alla truckar.
+2104: OK
+2105: Avbryt
+2106: Satsstorlek
+2107: Ställ in hur många produkter|att vänta på före|processering.
+2108: Sälj trucken för [price]?
+2109: Sälj Kvalitetskontroll.
+2110: VARNING|Att sälja denna station är inte rekommenderat|före du har självkontroll på varje station.|Att sälja friar upp en arbetare.
+2111: Uppgradera målarmaskin.
+2112: Om du uppgraderar denna maskin, kommer|den att kunna måla i två färger|samtidigt. Dock är varje rum mindre|och målningsprocessen är längre.||Uppgraderingen kostar 10 000|Fortsätt?
+2113: Vill du ha självkontroll?
+2114: Ledig personal:
+2115: Det finns inga lediga arbetare.
+2116: Är du säker?
+2117: Tillsätt personal
+2118: Tillsätt analytiker
+2119: Tillsätt marknadsförare
+2120: Produktionsschema avgör hur och när|en ny produkt påbörjas.|Välj mellan produktion baserad på |marknadskalkyl, eller produktion|baserad på efterfrågan.
+2121: Marknadskalkyl
+2122: Efterfrågan
+2123: Att välja detta avsätter en viss|andel produktionstid till att istället|underhålla fabriken mot slutet|av varje runda. Detta minskar|drastiskt antalet defekta produkter.
+2124: Använd denna pool av tillgängliga arbetare|till nya positioner i fabriken.
+2125: Att sälja trucken ger dig pengar,|och friar upp en arbetare.
+2126: Sälj Truck
+2127: Arbetaren du friställde|är nu tillgänglig i|Personal-rutan (Planeringsstationen).
+2128: Välj Gjuteriets Omställningsmetod
+2129: Nuvarande Metod:
+2130: FIFO
+2131: Smart läge
+2132: FIFO kommer alltid ta nästa produkt på kö.|Använd FIFO?
+2133: Smart läge kollar hela bufferten efter produlter som|passar nuvarande form.|Använd smart läge?

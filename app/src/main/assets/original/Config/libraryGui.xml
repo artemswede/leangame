@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<gui>
+  <head>
+    <style>
+.wrapper { transparent: false; background: #ccc; border: 2; border-color: #444; padding: 20; }
+.pageBox { transparent: false; background: #666; border: 2; border-color: #000; font-size: 4; }
+
+text { font: default; font-size: 10; color: #111; }
+a { font: default; font-size: 10; color: #11e; }
+h { font: default: font-size: 20; color: #000; }
+    </style>
+  </head>
+
+  <body>
+		<group zIndex="3000" class="wrapper" id="wrapper" x="30" y="30">
+			<group x="10" y="40" id="nav">
+				<a target="1" fileId="0" string="2051" />
+				<a target="2" fileId="0" string="2052" y="30" />
+				<a target="3" fileId="0" string="2053" y="60" />
+			</group>
+			
+			<page x="220" y="40" class="pageBox" id="content" width="480" height="500" zIndex="100" string="0" fileId="1" />
+			<button x="220" y="550" id="prevBtn" value="Previous" />
+			<button x="650" y="550" id="nextBtn" value="Next" />
+			
+			<button bmap="Art/Gui/radiobox.png" id="close" x="710" y="10" />
+		</group>
+  </body>
+</gui>

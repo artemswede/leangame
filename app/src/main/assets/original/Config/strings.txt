@@ -1,0 +1,207 @@
+# Name of the game
+0: Lean Santa
+1: Mean Santa
+4: Yes
+5: No
+
+# Start menu
+10: Start Game
+11: Settings
+12: Lean Library
+13: Credits
+14: Exit
+15: Start Logged Game
+16: Enter the ID number on Your questionaire.
+17: Start
+18: Cancel
+19: Show Highscores
+
+# Credits
+30:              --Credits--||Design: Joel Nyström, Björn Öjlert|Programming: Stefan Hurtig|Graphics: Daniel Kaplan, Anders Larsson|Test manager: Billy Frisell
+31: Close
+
+# Config menu
+50: Configuration
+51: Fullscreen:
+52: Sound volume:
+53: Music volume:
+54: Choose language:
+55: OK
+56: Back
+57: Default
+58: Proxy server:
+60: Some settings require the|game to be restarted.
+
+# Languages
+70: English
+71: Swedish
+72: Göteborgska
+
+# Highscore menu
+80: Highscores
+81: [name]: [score] ([time])
+82: Return
+83: Name
+84: Score
+85: Date
+
+# In-game strings
+100: New Product
+101: Start Production
+102: Stop Production
+103: Pause Game
+
+110: Start game
+111: Continue
+112: Done changing
+113: Back to main menu
+114: Send highscore
+
+120: Money
+121: Next
+122: Orders
+123: Speed:
+124: Round
+
+# Module info strings
+150: [name]|Cost: $[cost]|[desc]
+151: [name]|Damage level: [dmg]|Input buffer: [inBufSize]/[inBufMax]|Output buffer: [outBufSize]/[outBufMax]
+
+200: Inbuffer max:
+201: Outbuffer max:
+202: [module] detected a damaged product.|What to do?
+203: Discard
+204: Repair
+205: Find the broken station
+
+#Pause menu
+300: Game Paused
+301: Resume Game
+302: Lean Library
+303: Quit to Menu
+304: Exit Game
+305: Are you sure?
+
+#Highscore stuff
+320: Your score: [score]
+321: Enter your name:
+322: Send score
+323: Cancel
+324: Upload Highscore
+
+# Round info
+500: End of round [turn]|Earnings this round: [earnings]||Production
+#	 		 		Produced			Ordered       		Delivered|
+#	[bikeManName] 	[bikeManProduced]	[bikeManOrdered]	[bikeManDelivered]|
+#	[bikeWomenName]	[bikeWomanProduced]	[bikeWomanOrdered]	[bikeWomanDelivered]|
+#	[bikeChildName]	[bikeChildProduced]	[bikeChildOrdered]	[bikeChildDelivered]
+541: |[bikeManName]|[bikeWomanName]|[bikeChildName]
+542: Produced|[bikeManProduced]|[bikeWomanProduced]|[bikeChildProduced]
+543: Ordered|[bikeManOrdered]|[bikeWomanOrdered]|[bikeChildOrdered]
+544: Delivered|[bikeManDelivered]|[bikeWomanDelivered]|[bikeChildDelivered]
+545: Previous round
+546: Next round
+547: Logged rounds
+501: Welcome to the Lean Bicycle Factory.||Your job here is to optimize this factory|and make it a lean machine.||Observe the flow of the factory and|plan out what changes you want|to make for next round.||Round one starts when you click|the button.
+502: Would you like unlimited changes?|If you choose Yes, you will only play 5 rounds.|Choose No, and you'll continue as usual, but you get to play 6 rounds.
+510: Game Over!||Total score: [score]
+520: Lean Bicycle Factory
+530: Production run finished
+540: Game Over
+
+# Module change info
+600: Move
+601: Production schedule
+602: Maintenence
+603: Personnel
+604: Cleaning time:
+605: Moving will cost $[cost]. Proceed?
+606: Quality Assurance
+607: Storage Settings
+608: Buy new machine
+609: Configuration Time
+610: Batch Settings
+611: Sell Station
+650: Changes left
+651: Batch size:
+652: Sell Truck
+
+# Changes
+700: Make Changes
+701: In this mode you can make changes|to you factory. You only have two changes|per round, so choose carefully.||Click a station to see what changes|you can make.||After you've made the changes,|the next round will start.||Good luck!
+702: Start changing
+703: Done changing
+704: Now, let's see if the changes you've made|will make this factory run smoother|and leaner!
+705: Start next round
+
+# Module names/descriptions
+1000: Casting 
+1001: Casts the frame
+1002: Assembly
+1003: Assembles all parts
+1004: Painting
+1005: It Paints.
+1006: QA
+1007: Tests for faults
+1008: Storage
+1009: Store finished products
+1010: Planning
+1011: Schedules what orders to produce
+1012: Transporter
+1013: Moves products from station to station
+1014: Customer counter
+1015: Handles sales of bikes
+
+# Product names/descriptions
+2000: Santa's Red Snowman
+2001: Pretty fun stuff
+2002: Men's bikes
+2003: Women's bikes
+2004: Children's bikes
+
+2005: Cost: [cost]|Weight: [weight]
+2006: Light
+2007: Medium
+2008: Heavy
+
+# Library Links
+2050: Help
+2051: Introduction
+2052: The Seven Wastes
+2053: Something Leany
+
+# Change descriptions
+2100: Moving a station
+2101: Move a station closer to the others to reduce|the length a product has to travel.||When two buffer stands overlap they merge|to one, removing the need for the truck|to move the products.||The blue circles indicate a worker's teamwork|radius. Place workers together to reduce mistakes.||Weight: [weight]   Cost: [cost]
+2102: Truck Batch Size
+2103: Set how many products|to move at a time.|This is for all trucks.
+2104: OK
+2105: Cancel
+2106: Batch Size
+2107: Set how many products|to wait for before|processing.
+2108: Sell the truck for [price]?
+2109: Sell QA Station.
+2110: WARNING|Selling this station is not recommended before|you have self-control at every station.|Selling will free up a worker.
+2111: Upgrade Painting.
+2112: If you upgrade this machine, it will|be able to paint in two colors|simultainiously. However, each pocket|is smaller, and the paint procedure is|longer.||The upgrade costs 10,000.|Proceed?
+2113: Do you want Quality Assurance?
+2114: Free personnel:
+2115: There are not enough workers.
+2116: Are you sure?
+2117: Assign Personnel
+2118: Assign Analyst
+2119: Assign Marketer
+2120: Production schedule determines how and|when to start producing a new product.|Choose between production based on|market forecasts, and production based|on current demand.
+2121: Market Forecast
+2122: Current Demand
+2123: Selecting this setting will sacrifice|a certain amount of production time in|favor of cleaning up the factory|towards the end of each round.|This will drastically reduce the amount of|defect products.
+2124: Use this pool of free workers to assign|workers to a new job in the factory.
+2125: Selling the truck will give you|an amount of money, and also|free up a worker.
+2126: Sell Truck
+2127: The worker you freed up|is now available in the|Personnel window (Planning station).
+2128: Select Casting Configuration Mode
+2129: Current mode:
+2130: FIFO
+2131: Smart mode
+2132: FIFO will always process the next product in line.|Use FIFO?
+2133: Smart mode checks the inbuffer for products that fit|in the current mold.|Use Smart mode?

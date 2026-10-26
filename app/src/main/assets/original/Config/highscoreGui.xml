@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<gui>
+  <head>
+    <style>
+.infoBox { transparent: false; border: 2; border-color: #555; background: #89c; padding: 20; }
+.header { color: #000; }
+.category { color: #000; font-size: 10; }
+.entries { color: #000; font-size: 8; }
+    </style>
+  </head>
+
+  <body>
+    <group x="190" y="60" zIndex="600" class="infoBox" id="scoreBox">
+		<text x="20" y="20" string="80" class="header" />
+
+		<text x="40" y="60" string="83" class="category" />
+		<text x="40" y="90" class="entries" id="scoreNames" />
+		
+		<text x="200" y="60" string="84" class="category" />
+		<text x="200" y="90" class="entries" id="scoreScores" />
+		
+		<text x="340" y="60" string="85" class="category" />
+		<text x="340" y="90" class="entries" id="scoreTimes" />
+
+		<button x="550" y="550" id="close" string="82" />
+    </group>
+  </body>
+</gui>

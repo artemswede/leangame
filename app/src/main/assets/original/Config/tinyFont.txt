@@ -1,0 +1,5 @@
+FREETYPE
+tinyFont
+Config/tinyFont.ttf
+30
+all

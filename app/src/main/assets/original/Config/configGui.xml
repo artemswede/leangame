@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<gui>
+	<head>
+		<style>
+button { background: #ccc; transparent: false; border: 3; 3d-border: true; border-color: #000; font: default; font-size: 10; padding: 3; }
+button.inactive { background: #eee; border-color: #999; color: #777; }
+button:hover { background: #eee; border-color: #f44; color: #f00; }
+button:active { invert-3d: true; background: #eee; }
+group { background: #fff; opacity: 0.85; transparent: false; border: 3; border-color: #000; padding: 40; }
+text { font: default; font-size: 12; color: #000; }
+.header { font-size: 14; }
+.infoBox { padding: 3; }
+.inputBox { border: 1; border-color: #000; }
+		</style>
+		<script src="Script/configScript.js" />
+	</head>
+	
+	<body>
+		<group id="main" x="300" y="100" zIndex="100">
+			<text x="40" y="0" string="50" class="header" />
+			
+			<text x="10" y="45" string="51" /><checkbox x="200" y="60" id="fullscreen" />
+			<text x="10" y="75" string="53" /><slider x="200" y="80" size="150" id="musicVolume" />
+			<text x="10" y="105" string="52" /><slider x="200" y="110" size="150" id="soundVolume" />
+			<text x="10" y="135" string="58" /><input x="200" y="137" size="150" id="proxyAddress" class="inputBox" />
+			<text x="10" y="170" string="54" />
+			<radiogroup x="20" y="205" id="language">
+				<radio x="0" y="20" value="eng" /><img src="Art/Gui/english.png" string="70" x="30" y="0" onmouseover="showInfo" onmouseout="hideInfo" />
+				<radio x="0" y="70" value="swe" /><img src="Art/Gui/swedish.png" string="71" x="30" y="50" onmouseover="showInfo" onmouseout="hideInfo" />
+				<radio x="0" y="120" value="rofl" /><img src="Art/Gui/rofl.png" string="72" x="30" y="100" onmouseover="showInfo" onmouseout="hideInfo" />
+			</radiogroup>
+			
+			<button x="50" y="370" string="55" id="okBtn" />
+			<button x="120" y="370" string="56" id="backBtn" />
+			<button x="200" y="370" string="57" id="defBtn" />
+
+			<text x="10" y="400" string="60" />
+		</group>
+	</body>
+</gui>

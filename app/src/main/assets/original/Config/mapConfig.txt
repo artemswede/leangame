@@ -1,0 +1,31 @@
+levelFile: Art/level.nlf;
+
+# Production scheme speed (seconds)
+minProdTime: 2.9;
+maxProdTime: 3;
+
+orderTimerMin: 2;
+orderTimerMax: 4;
+orderWaitTimer: 15;
+orderProbabilities: bikeMan 2, bikeWoman 1, bikeChild 1;
+
+# Length of a round (in minutes)
+playTime: 3;
+
+startMoney: 5000;
+playTurns: 5;
+changesPerTurn: 2;
+
+scorePerSold: 500;
+scorePerUnsold: 250;
+scorePerDiscarded: 250;
+
+blurbOffset: -70 -20 90;
+blurbTimerOffset: -2 -0.5 0.5;
+blurbTimerSize: 88 53;
+
+customerArea: -120 70 150 150;
+
+marketingProbability: 0.5;
+
+repairCost: 300;

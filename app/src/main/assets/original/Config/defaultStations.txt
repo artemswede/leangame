@@ -1,0 +1,7 @@
+0 -300 Planning
+300 -250 Casting
+0 150 Assembly
+-300 150 Painting
+300 -50 QA
+-300 -250 Storage
+350 150 Counter

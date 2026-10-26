@@ -1,0 +1,22 @@
+data {
+  id: bikeWoman;
+
+  cost: 220;
+  price: 500;
+  maxDamage: 20;
+
+  name: 2003;
+  desc: 0;
+
+  icon: Art/productThumb2.png;
+  blurb: Art/BlurbDamCykel.png;
+}
+
+base { default: true; file: Art/Products/CykelDamAnim.txt; }
+casted { frame: 1; }
+assembled { frame: 2; }
+painted { frame: 3; }
+checked { frame: 4; }
+
+finished { }
+sold { }

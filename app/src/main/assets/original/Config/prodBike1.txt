@@ -1,0 +1,21 @@
+data {
+  id: bikeMan;
+
+  cost: 200;
+  price: 500;
+  maxDamage: 20;
+
+  name: 2002;
+  desc: 0;
+  icon: Art/productThumb1.png;
+  blurb: Art/BlurbHerrCykel.png;
+}
+
+base { default: true; file: Art/Products/CykelHerrAnim.txt; }
+casted { frame: 1; }
+assembled { frame: 2; }
+painted { frame: 3; }
+checked { frame: 4; }
+
+finished { }
+sold { }

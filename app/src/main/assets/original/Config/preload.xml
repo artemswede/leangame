@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<preload>
+  <path src="Art" />
+  <path src="Script" />
+
+  <dir src="Config">
+    <moduleTypes src="moduleTypes.txt" />
+    <modules src="modules.txt" />
+    <product src="prodBike1.txt" />
+    <product src="prodBike2.txt" />
+    <product src="prodBike3.txt" />
+    <schemes src="prodSchemes.txt" />
+
+    <eng:strings id="0" src="strings.txt" />
+    <eng:strings id="1" src="libraryEng.txt" />
+	<swe:strings id="0" src="stringsSwe.txt" />
+	<swe:strings id="1" src="librarySwe.txt" />
+	
+	<font src="tinyFont.txt" />
+	
+  </dir>
+</preload>

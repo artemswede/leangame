@@ -1,0 +1,22 @@
+data {
+  id: bikeChild;
+
+  cost: 180;
+  price: 400;
+  maxDamage: 20;
+
+  name: 2004;
+  desc: 0;
+
+  icon: Art/productThumb3.png;
+  blurb: Art/BlurbBarnCykel.png;
+}
+
+base { default: true; file: Art/Products/CykelBarnAnim.txt; }
+casted { frame: 1; }
+assembled { frame: 2; }
+painted { frame: 3; }
+checked { frame: 4; }
+
+finished { }
+sold { }

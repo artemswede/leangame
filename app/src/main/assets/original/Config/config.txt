@@ -1,0 +1,10 @@
+fullscreen: 0
+screensize: 4
+antialias: 0
+sound: 236
+music: 108
+lang: eng
+shaders: 0
+imageformat: 1
+controller: 0
+proxy: 
